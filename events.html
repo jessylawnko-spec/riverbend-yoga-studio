@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Riverbend Yoga Studio - Events</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+<header>
+    <h1>Workshops and Events</h1>
+
+    <nav>
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="events.html">Events</a></li>
+        </ul>
+    </nav>
+</header>
+
+<main>
+
+    <section>
+        <h2>Monthly Workshops</h2>
+
+        <figure>
+            <img src="Yoga_c/yoga-workshop_c.png"
+                 alt="Yoga students taking part in a group workshop">
+
+            <figcaption>
+                A relaxing day at Riverbend Yoga designed to help learners practice new skills.
+            </figcaption>
+        </figure>
+
+        <ul>
+            <li>September 5 - Beginners Yoga</li>
+            <li>September 12 - Breathe and Relax</li>
+            <li>September 19 - Restorative Session</li>
+            <li>September 26 - After Work Stretch</li>
+        </ul>
+    </section>
+
+    <section>
+        <h2>Request a Spot</h2>
+
+        <form action="#" method="post">
+
+            <fieldset>
+                <legend>Your Information</legend>
+
+                <p>
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name" required>
+                </p>
+
+                <p>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                </p>
+
+                <p>
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone">
+                </p>
+
+                <p>
+                    <label for="interest">Class or Event Interest:</label>
+                    <select id="interest" name="interest" required>
+                        <option value="">Choose an option</option>
+                        <option value="gentle">Gentle Yoga</option>
+                        <option value="vinyasa">Vinyasa Yoga</option>
+                        <option value="restorative">Restorative Yoga</option>
+                        <option value="private">Private Session</option>
+                        <option value="workshop">Monthly Workshop</option>
+                    </select>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Experience Level</legend>
+
+                <p>
+                    <input type="radio" id="beginner" name="experience" value="beginner" required>
+                    <label for="beginner">Beginner</label>
+                </p>
+
+                <p>
+                    <input type="radio" id="some-experience" name="experience" value="some-experience">
+                    <label for="some-experience">Some Experience</label>
+                </p>
+
+                <p>
+                    <input type="radio" id="experienced" name="experience" value="experienced">
+                    <label for="experienced">Experienced</label>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Preferred Contact Method</legend>
+
+                <p>
+                    <input type="radio" id="contact-email" name="contact-method" value="email" required>
+                    <label for="contact-email">Email</label>
+                </p>
+
+                <p>
+                    <input type="radio" id="contact-phone" name="contact-method" value="phone">
+                    <label for="contact-phone">Phone</label>
+                </p>
+            </fieldset>
+
+            <p>
+                <label for="message">Message:</label><br>
+                <textarea id="message" name="message" rows="5" cols="40" required></textarea>
+            </p>
+
+            <p>
+                <button type="submit">Request a Spot</button>
+            </p>
+
+        </form>
+    </section>
+
+</main>
+
+<footer>
+    <p>&copy; 2026 Riverbend Yoga Studio</p>
+</footer>
+
+</body>
+</html>
