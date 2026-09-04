@@ -48,7 +48,24 @@
     <section>
         <h2>Request a Spot</h2>
 
-        <form action="#" method="post">
+        <section>
+    <h2>Choose Your Class Preference</h2>
+
+    <label for="classPreference">Which class are you most interested in?</label>
+
+    <select id="classPreference">
+        <option value="">Select a class</option>
+        <option value="Gentle Yoga">Gentle Yoga</option>
+        <option value="Vinyasa Yoga">Vinyasa Yoga</option>
+        <option value="Restorative Yoga">Restorative Yoga</option>
+    </select>
+
+    <button type="button" id="savePreference">Save Preference</button>
+
+    <p id="preferenceMessage"></p>
+</section>
+
+        <form action="#" method="post" novalidate>
 
             <fieldset>
                 <legend>Your Information</legend>
@@ -56,11 +73,13 @@
                 <p>
                     <label for="name">Name:</label>
                     <input type="text" id="name" name="name" required>
+                    <span id="nameError"></span>
                 </p>
 
                 <p>
                     <label for="email">Email:</label>
                     <input type="email" id="email" name="email" required>
+                    <span id="emailError"></span>
                 </p>
 
                 <p>
@@ -131,6 +150,6 @@
 <footer>
     <p>&copy; 2026 Riverbend Yoga Studio</p>
 </footer>
-
+<script src="script.js"></script>
 </body>
 </html>
