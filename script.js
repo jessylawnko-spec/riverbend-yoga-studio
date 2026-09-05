@@ -4,15 +4,26 @@ const classOptions = [
     "Restorative Yoga"
 ];
 
+const preferenceMessages = {
+    saved: "Your class preference has been saved: ",
+    restored: "Your saved class preference is: ",
+    select: "Please select a class first."
+};
+
+const validationMessages = {
+    name: "Please enter your name.",
+    email: "Please enter a valid email address."
+};
+
 function saveClassPreference() {
     const classPreference = document.getElementById("classPreference").value;
     const message = document.getElementById("preferenceMessage");
 
     if (classOptions.includes(classPreference)) {
         localStorage.setItem("savedClassPreference", classPreference);
-        message.textContent = "Your class preference has been saved: " + classPreference;
+        message.textContent = preferenceMessages.saved + classPreference;
     } else {
-        message.textContent = "Please select a class first.";
+        message.textContent = preferenceMessages.select;
     }
 }
 
@@ -22,13 +33,16 @@ function loadClassPreference() {
     if (savedPreference) {
         document.getElementById("classPreference").value = savedPreference;
         document.getElementById("preferenceMessage").textContent =
-            "Your saved class preference is: " + savedPreference;
+            preferenceMessages.restored + savedPreference;
     }
 }
 
-document.getElementById("savePreference").addEventListener("click", saveClassPreference);
+document
+    .getElementById("savePreference")
+    .addEventListener("click", saveClassPreference);
 
 loadClassPreference();
+
 const form = document.querySelector("form");
 
 function validateForm(event) {
@@ -45,12 +59,12 @@ function validateForm(event) {
     let isValid = true;
 
     if (name.value.trim() === "") {
-        nameError.textContent = "Please enter your name.";
+        nameError.textContent = validationMessages.name;
         isValid = false;
     }
 
     if (!email.value.includes("@")) {
-        emailError.textContent = "Please enter a valid email address.";
+        emailError.textContent = validationMessages.email;
         isValid = false;
     }
 
